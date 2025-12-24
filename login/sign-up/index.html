@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login / Signup Demo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1 id="form-title">Sign Up</h1>
+
+      <div class="toggle-row">
+        <button id="show-signup" class="toggle active">Sign Up</button>
+        <button id="show-login" class="toggle">Log In</button>
+      </div>
+
+      <form id="signup-form" class="form" autocomplete="off">
+        <label>
+          Username
+          <input type="text" id="signup-username" required minlength="3" />
+        </label>
+        <label>
+          Email
+          <input type="email" id="signup-email" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="signup-password" required minlength="6" />
+        </label>
+        <button type="submit" class="primary">Create account</button>
+        <p class="message" id="signup-message" aria-live="polite"></p>
+      </form>
+
+      <form id="login-form" class="form hidden" autocomplete="off">
+        <label>
+          Username or Email
+          <input type="text" id="login-identifier" required />
+        </label>
+        <label>
+          Password
+          <input type="password" id="login-password" required />
+        </label>
+        <button type="submit" class="primary">Sign in</button>
+        <p class="message" id="login-message" aria-live="polite"></p>
+      </form>
+
+      <div class="divider">Demo only — credentials stored in browser</div>
+
+      <div id="welcome" class="welcome hidden">
+        <h2>Welcome, <span id="welcome-user"></span>!</h2>
+        <button id="logout">Log out</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
